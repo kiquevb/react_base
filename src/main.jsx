@@ -5,16 +5,22 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 import "./i18n.js";
-import { QueryWrapper, ThemeWrapper } from "@/wrappers/wrappers.exports";
+import {
+  AlertWrapper,
+  QueryWrapper,
+  ThemeWrapper,
+} from "@/wrappers/wrappers.exports";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <QueryWrapper>
-      <BrowserRouter>
-        <ThemeWrapper>
-          <App />
-        </ThemeWrapper>
-      </BrowserRouter>
-    </QueryWrapper>
+    <ThemeWrapper>
+      <AlertWrapper>
+        <QueryWrapper>
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
+        </QueryWrapper>
+      </AlertWrapper>
+    </ThemeWrapper>
   </React.StrictMode>
 );

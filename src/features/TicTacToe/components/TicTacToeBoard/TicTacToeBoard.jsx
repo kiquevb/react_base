@@ -24,7 +24,7 @@ const TicTacToeBoard = () => {
         );
       })}
 
-      <Button onClick={() => Alert.success("holi")}>Click me</Button>
+      <Button onClick={() => Alert.info("holi")}>Click me</Button>
     </div>
   );
 };

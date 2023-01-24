@@ -1,4 +1,10 @@
+import { toast } from "react-toastify";
+
 const Alert = (function () {
+  const info = (message) => {
+    toast.info(message);
+  };
+
   const success = (message) => {
     alert(`Success! ${message}`);
   };
@@ -10,6 +16,7 @@ const Alert = (function () {
   return {
     success,
     error,
+    info,
   };
 })();
 
