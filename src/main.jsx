@@ -5,22 +5,16 @@ import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 
 import "./i18n.js";
-import {
-  ReduxWrapper,
-  QueryWrapper,
-  ThemeWrapper,
-} from "@/wrappers/wrappers.exports";
+import { QueryWrapper, ThemeWrapper } from "@/wrappers/wrappers.exports";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ReduxWrapper>
-      <QueryWrapper>
-        <BrowserRouter>
-          <ThemeWrapper>
-            <App />
-          </ThemeWrapper>
-        </BrowserRouter>
-      </QueryWrapper>
-    </ReduxWrapper>
+    <QueryWrapper>
+      <BrowserRouter>
+        <ThemeWrapper>
+          <App />
+        </ThemeWrapper>
+      </BrowserRouter>
+    </QueryWrapper>
   </React.StrictMode>
 );

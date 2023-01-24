@@ -6,17 +6,15 @@ import {
   Text,
   useMantineTheme,
 } from "@mantine/core";
-import { useDispatch, useSelector } from "react-redux";
 
 import { ThemeToggler, Blank } from "@/components/components.exports";
-import { store_navbar_open, toggle_navbar_open } from "@layout/layout.store";
+import { useLayoutStore } from "@/store/layout.store";
 
 const HeaderComponent = () => {
   const theme = useMantineTheme();
 
-  const open = useSelector(store_navbar_open);
-  const dispatch = useDispatch();
-  const handleOpen = () => dispatch(toggle_navbar_open());
+  const open = useLayoutStore((state) => state.isNavbarOpen);
+  const handleOpen = useLayoutStore((state) => state.toggle);
 
   return (
     <Header height={{ base: 50 }} p="md">

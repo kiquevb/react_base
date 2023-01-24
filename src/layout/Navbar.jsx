@@ -1,24 +1,25 @@
 import React, { useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useSelector } from "react-redux";
 import { Navbar, ScrollArea } from "@mantine/core";
 
 import Icons, { MyIcon } from "@infra/Icons";
-import { store_navbar_open } from "@layout/layout.store";
+import { useLayoutStore } from "@/store/layout.store";
 import { paths, menu } from "@/navigation/navigation.exports";
 
 import { useStyles } from "@layout/Styles/Navbar.styles";
 
 const NavbarComponent = () => {
   const { classes, cx } = useStyles();
-  const open = useSelector(store_navbar_open);
   const location = useLocation();
 
   const active = useMemo(() => location.pathname, [location.pathname]);
 
+  const isOpen = useLayoutStore((state) => state.isNavbarOpen);
+  const handleClose = useLayoutStore((state) => state.close);
+
   // Map elements from navigation/menu
   const links = menu.map((item, index) => (
-    <p key={index}>
+    <p key={index} onClick={handleClose}>
       <Link
         className={cx(classes.link, {
           [classes.linkActive]: active.includes(item.path),
@@ -35,7 +36,7 @@ const NavbarComponent = () => {
     <Navbar
       className={classes.navbar}
       width={{ xs: 220 }}
-      hidden={!open}
+      hidden={!isOpen}
       hiddenBreakpoint="xs"
     >
       <Navbar.Section grow>
