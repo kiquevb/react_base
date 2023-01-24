@@ -1,25 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 import {
   TicTacToeTile,
   TicTacToeWinner,
-  TicTacToeModule,
 } from "@/features/TicTacToe/TicTacToe.exports";
 
+import TicTacToeBoardLogic from "./TicTacToeBoard.logic";
+import { Button } from "@/components/components.exports";
+import Alert from "@/infrastructure/Alerts";
+
 const TicTacToeBoard = () => {
-  const [gameState, setGameState] = useState(new Array(9).fill(0));
-  const [playerTurn, setPlayerTurn] = useState(1);
-  const [winner, setWinner] = useState(null);
-
-  // Update game state, check if there's a winner and change player
-  const onTileClick = (index) => {
-    const newState = [...gameState];
-    newState[index] = playerTurn;
-
-    setGameState(newState);
-    setWinner(TicTacToeModule.checkWinner(newState) ? playerTurn : null);
-    setPlayerTurn(playerTurn === 1 ? 2 : 1);
-  };
+  const { winner, gameState, onTileClick } = TicTacToeBoardLogic();
 
   return (
     <div>
@@ -32,6 +23,8 @@ const TicTacToeBoard = () => {
           </span>
         );
       })}
+
+      <Button onClick={() => Alert.success("holi")}>Click me</Button>
     </div>
   );
 };
