@@ -8,6 +8,7 @@ const TicTacToeBoardLogic = () => {
 
   // Update game state, check if there's a winner and change player
   const onTileClick = (index) => {
+    // Updates state with player turn number
     const newState = [...gameState];
     newState[index] = playerTurn;
 
