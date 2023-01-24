@@ -1,0 +1,40 @@
+{
+  "name": "codebase",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "prettier": "npx prettier --check src/"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@mantine/core": "^5.8.4",
+    "@mantine/hooks": "^5.8.4",
+    "@reduxjs/toolkit": "^1.9.1",
+    "@tabler/icons": "^1.114.0",
+    "@tanstack/react-query": "^4.18.0",
+    "@tanstack/react-query-devtools": "^4.18.0",
+    "axios": "^1.2.0",
+    "i18next": "^22.4.6",
+    "i18next-http-backend": "^2.1.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^12.1.1",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^5.3.4",
+    "zustand": "^4.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "eslint": "^8.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-config-react-app": "^7.0.1",
+    "prettier": "2.8.0",
+    "vite": "^3.2.3"
+  }
+}

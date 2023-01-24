@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    // Aliases configuration for editor autocompletion
+    "paths": {
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@features/*": ["src/features/*"],
+      "@infra/*": ["src/infrastructure/*"],
+      "@layout/*": ["src/layout/*"],
+      "@navigation/*": ["src/navigation/*"],
+      "@wrappers/*": ["src/wrappers/*"]
+    }
+  }
+}
