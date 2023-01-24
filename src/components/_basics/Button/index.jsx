@@ -1,4 +1,5 @@
 import React from "react";
+import "./style.sass";
 
 const Button = ({ onClick = () => null, children, ...rest }) => {
   return (
