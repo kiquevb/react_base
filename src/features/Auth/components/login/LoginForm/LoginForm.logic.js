@@ -1,36 +1,34 @@
-import { useState } from "react";
 import { useHistory } from "react-router-dom";
+import { joiResolver, useForm } from "@mantine/form";
 
 import Auth from "@/infrastructure/Auth";
 import paths from "@/navigation/paths";
 import { useLoginMutation } from "@/features/Auth/Auth.queries";
+import AuthValidator from "@/features/Auth/Auth.validator";
 
 const LoginFormLogic = () => {
   const history = useHistory();
 
-  const [loginData, setLoginData] = useState({
-    password: "",
-    email: "",
+  const form = useForm({
+    validate: joiResolver(AuthValidator.loginSchema),
+    initialValues: {
+      email: "",
+      password: "",
+    },
   });
-
-  const onInputChange = (e) =>
-    setLoginData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
 
   const { mutate: login } = useLoginMutation();
 
-  const onLogin = () => {
-    // TODO add validator
-    if (true) {
-      login(loginData, {
-        onSuccess: (response) => {
-          Auth.setLoginData(response?.item);
-          history.push(paths.home);
-        },
-      });
-    }
+  const handleLogin = (values) => {
+    login(values, {
+      onSuccess: (response) => {
+        Auth.setLoginData(response?.item);
+        history.push(paths.home);
+      },
+    });
   };
 
-  return { onInputChange, onLogin, loginData };
+  return { form, handleLogin };
 };
 
 export default LoginFormLogic;

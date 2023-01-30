@@ -1,28 +1,27 @@
 import React from "react";
 import LoginFormLogic from "./LoginForm.logic";
+import { TextInput } from "@mantine/core";
 
 const LoginForm = () => {
-  const { loginData, onLogin, onInputChange } = LoginFormLogic();
-  const { password, email } = loginData;
+  const { form, handleLogin } = LoginFormLogic();
 
   return (
-    <div>
-      <input
-        value={password}
-        onChange={onInputChange}
-        name="password"
-        placeholder="password"
+    <form onSubmit={form.onSubmit(handleLogin)}>
+      <TextInput
+        withAsterisk
+        label="Email"
+        placeholder="example@mail.com"
+        {...form.getInputProps("email")}
       />
 
-      <input
-        value={email}
-        onChange={onInputChange}
-        name="email"
-        placeholder="email"
+      <TextInput
+        withAsterisk
+        label="Password"
+        {...form.getInputProps("password")}
       />
 
-      <button onClick={onLogin}>Enter</button>
-    </div>
+      <button type="submit">Login</button>
+    </form>
   );
 };
 
