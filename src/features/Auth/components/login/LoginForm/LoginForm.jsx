@@ -2,11 +2,25 @@ import React from "react";
 import LoginFormLogic from "./LoginForm.logic";
 
 const LoginForm = () => {
-  const { token, onLogin, onInputChange } = LoginFormLogic();
+  const { loginData, onLogin, onInputChange } = LoginFormLogic();
+  const { password, email } = loginData;
 
   return (
     <div>
-      <input value={token} onChange={onInputChange} />
+      <input
+        value={password}
+        onChange={onInputChange}
+        name="password"
+        placeholder="password"
+      />
+
+      <input
+        value={email}
+        onChange={onInputChange}
+        name="email"
+        placeholder="email"
+      />
+
       <button onClick={onLogin}>Enter</button>
     </div>
   );

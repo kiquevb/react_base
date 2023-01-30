@@ -14,8 +14,17 @@ function App() {
     <Suspense fallback={<>Loading...</>}>
       <Switch>
         {/* Public routes */}
-        <Route path={paths.login} name="Login" render={() => <LoginView />} />
         <Route path={paths.error} name="Error" render={() => <>Error view</>} />
+
+        <Route
+          path={paths.login}
+          name="Login"
+          render={() => (
+            <ErrorWrapper>
+              <LoginView />
+            </ErrorWrapper>
+          )}
+        />
 
         {/* Private routes */}
         <Route

@@ -1,3 +1,4 @@
+import Alert from "@/infrastructure/Alerts";
 import {
   MutationCache,
   QueryCache,
@@ -8,12 +9,12 @@ import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 const isDev = import.meta.env.VITE_ENV === "development";
 
-// TODO use infrastructure/Alerts
-const handleError = (error) => {
-  console.dir(error);
-};
+const handleError = (error) => Alert.error(getErrorMessage(error));
 
 const queryOptions = {
+  logger: {
+    error: () => {},
+  },
   defaultOptions: {
     queries: {
       staleTime: isDev ? 1000 * 120 : 0,
@@ -46,3 +47,9 @@ const QueryWrapper = ({ children }) => {
 };
 
 export default QueryWrapper;
+
+export const getErrorMessage = (error) =>
+  error?.response?.data?.error?.message ||
+  error?.response?.data?.message ||
+  error?.message ||
+  "Unknown error";
