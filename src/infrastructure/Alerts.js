@@ -1,17 +1,9 @@
 import { toast } from "react-toastify";
 
 const Alert = (function () {
-  const info = (message) => {
-    toast.info(message);
-  };
-
-  const success = (message) => {
-    alert(`Success! ${message}`);
-  };
-
-  const error = (message) => {
-    alert(`Error! ${message}`);
-  };
+  const info = (message) => toast.info(message);
+  const success = (message) => toast.success(message);
+  const error = (message) => toast.error(message);
 
   return {
     success,
