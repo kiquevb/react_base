@@ -1,8 +1,15 @@
+import Storage from "./Storage";
+
 const Auth = (function () {
-  const isLoggedIn = () => true;
+  const isLoggedIn = () => !!Storage.get()?.token;
+
+  const setLoginData = ({ token }) => Storage.setItem("token", token);
+  const logout = () => Storage.setItem("token", "");
 
   return {
     isLoggedIn,
+    setLoginData,
+    logout,
   };
 })();
 

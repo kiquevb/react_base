@@ -1,8 +1,10 @@
 const paths = {
+  login: "/login",
+  logout: "/logout",
   home: "/home",
   error: "/500",
+  //
   tictactoe: "/tic-tac-toe",
-  logout: "/logout",
   // names/labels of the paths above
   names: {
     home: "Home",

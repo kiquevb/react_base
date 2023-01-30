@@ -1,9 +1,12 @@
-import { Suspense } from "react";
+import { Suspense, lazy } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Main from "@layout/Main";
 import { paths } from "@/navigation/navigation.exports";
 import { ErrorWrapper, AuthWrapper } from "@/wrappers/wrappers.exports";
+
+// Public view components
+export const LoginView = lazy(() => import("@features/Auth/views/Login.view"));
 
 // Routes controller
 function App() {
@@ -11,6 +14,7 @@ function App() {
     <Suspense fallback={<>Loading...</>}>
       <Switch>
         {/* Public routes */}
+        <Route path={paths.login} name="Login" render={() => <LoginView />} />
         <Route path={paths.error} name="Error" render={() => <>Error view</>} />
 
         {/* Private routes */}
