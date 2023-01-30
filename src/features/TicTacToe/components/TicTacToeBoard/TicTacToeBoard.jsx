@@ -6,8 +6,6 @@ import {
 } from "@/features/TicTacToe/TicTacToe.exports";
 
 import TicTacToeBoardLogic from "./TicTacToeBoard.logic";
-import { Button } from "@/components/components.exports";
-import Alert from "@/infrastructure/Alerts";
 
 const TicTacToeBoard = () => {
   const { winner, gameState, onTileClick } = TicTacToeBoardLogic();
@@ -23,8 +21,6 @@ const TicTacToeBoard = () => {
           </span>
         );
       })}
-
-      <Button onClick={() => Alert.info("holi")}>Click me</Button>
     </div>
   );
 };

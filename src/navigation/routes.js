@@ -1,4 +1,4 @@
-import { HomeView, TicTacToeView } from "@navigation/imports";
+import { HomeView, TicTacToeView, PlaygroundView } from "@navigation/imports";
 import { paths } from "@/navigation/navigation.exports";
 
 // Routes and the component they render
@@ -11,6 +11,10 @@ const routes = [
   {
     path: paths.tictactoe,
     component: TicTacToeView,
+  },
+  {
+    path: "/test",
+    component: PlaygroundView,
   },
 ];
 

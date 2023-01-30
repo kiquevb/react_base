@@ -7,3 +7,7 @@ export const HomeView = lazy(() => import("@features/Home/views/Home.view"));
 export const TicTacToeView = lazy(() =>
   import("@features/TicTacToe/views/TicTacToe.view")
 );
+
+export const PlaygroundView = lazy(() =>
+  import("@features/Playground/views/Playground.view")
+);
