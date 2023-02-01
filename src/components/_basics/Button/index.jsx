@@ -3,7 +3,7 @@ import "./style.scss";
 
 const Button = ({ onClick = () => null, children, ...rest }) => {
   return (
-    <button onClick={onClick} {...rest}>
+    <button className="my-button" onClick={onClick} {...rest}>
       {children}
     </button>
   );
