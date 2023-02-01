@@ -7,7 +7,11 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 
-import { ThemeToggler, Blank } from "@/components/components.exports";
+import {
+  ThemeToggler,
+  Blank,
+  LanguageSelector,
+} from "@/components/components.exports";
 import { useLayoutStore } from "@/store/layout.store";
 
 const HeaderComponent = () => {
@@ -32,6 +36,8 @@ const HeaderComponent = () => {
         <ThemeToggler />
         <Blank />
         <Text>Random games</Text>
+        <Blank />
+        <LanguageSelector />
       </div>
     </Header>
   );
