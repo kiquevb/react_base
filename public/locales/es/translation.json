@@ -1,4 +1,11 @@
 {
+  "basic": {
+    "save": "Guardsr",
+    "login": "Entrar",
+    "logout": "Salir",
+    "email": "Correo",
+    "password": "Contraseña"
+  },
   "tictactoe": {
     "winner": "El ganador es el jugador"
   }

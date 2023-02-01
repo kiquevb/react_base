@@ -1,4 +1,11 @@
 {
+  "basic": {
+    "save": "Save",
+    "login": "Login",
+    "logout": "Logout",
+    "email": "Email",
+    "password": "Password"
+  },
   "tictactoe": {
     "winner": "The winner is player"
   }

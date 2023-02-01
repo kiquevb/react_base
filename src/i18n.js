@@ -7,7 +7,7 @@ i18next
   .use(Backend)
   .init({
     debug: true,
-    fallbackLng: "es",
+    fallbackLng: "en",
     saveMissing: true,
     detection: {
       order: ["cookie", "localStorage", "queryString"],

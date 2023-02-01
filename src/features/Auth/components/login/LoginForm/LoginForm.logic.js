@@ -5,8 +5,10 @@ import Auth from "@/infrastructure/Auth";
 import paths from "@/navigation/paths";
 import { useLoginMutation } from "@/features/Auth/Auth.queries";
 import AuthValidator from "@/features/Auth/Auth.validator";
+import Translator from "@/infrastructure/Translator";
 
 const LoginFormLogic = () => {
+  const { t } = Translator();
   const history = useHistory();
 
   const form = useForm({
@@ -28,7 +30,13 @@ const LoginFormLogic = () => {
     });
   };
 
-  return { form, handleLogin };
+  const text = {
+    login: t("basic.login"),
+    email: t("basic.email"),
+    password: t("basic.password"),
+  };
+
+  return { form, text, handleLogin };
 };
 
 export default LoginFormLogic;
