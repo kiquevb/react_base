@@ -1,14 +1,11 @@
-import Translator from "@/infrastructure/Translator";
 import React from "react";
+import LanguageSelectorLogic from "./LanguageSelector.logic";
 
 const LanguageSelector = () => {
-  const { changeLanguage, language } = Translator();
-
-  const onChange = (e) => changeLanguage(e.target.value);
-
+  const { language, onLanguageChange } = LanguageSelectorLogic();
   return (
     <div>
-      <select value={language} onChange={onChange}>
+      <select value={language} onChange={onLanguageChange}>
         <option value="es">Spanish</option>
         <option value="en">English</option>
       </select>
