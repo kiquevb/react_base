@@ -6,8 +6,7 @@ import {
   IconBrandAppleArcade,
 } from "@tabler/icons";
 
-import { Icon } from "@/components/components.exports";
-
+import Icon from "@/components/_basics/Icon";
 
 const Icons = (function () {
   return {

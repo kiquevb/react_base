@@ -1,7 +1,8 @@
-import { Button } from "@/components/components.exports";
+import React, { useState } from "react";
+
+import { Button } from "@/components";
 import Alert from "@/infrastructure/Alerts";
 import Storage from "@/infrastructure/Storage";
-import React, { useState } from "react";
 
 const Playground = () => {
   const [storageNewKey, setStorageNewKey] = useState("");
