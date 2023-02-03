@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom";
 
 import { Auth } from "@infra/_exports";
 import paths from "@navigation/paths";
-import { LanguageSelector } from "@components";
+import { LanguageSelector } from "@components/_exports";
 import { LoginForm } from "../Auth.exports";
 
 const Login = () => {

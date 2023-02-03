@@ -7,7 +7,7 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 
-import { ThemeToggler, Blank, LanguageSelector } from "@/components";
+import { ThemeToggler, Blank, LanguageSelector } from "@components/_exports";
 import { useLayoutStore } from "@/store/layout.store";
 
 const HeaderComponent = () => {

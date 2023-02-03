@@ -2,7 +2,7 @@ import React from "react";
 import { TextInput, PasswordInput } from "@mantine/core";
 
 import LoginFormLogic from "./LoginForm.logic";
-import { Button } from "@/components";
+import { Button } from "@components/_exports";
 
 const LoginForm = () => {
   const { form, text, handleLogin } = LoginFormLogic();
