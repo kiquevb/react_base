@@ -4,7 +4,8 @@ import {
   PlaygroundView,
   LogoutView,
 } from "@navigation/imports";
-import { paths } from "@/navigation/navigation.exports";
+
+import { paths } from "@navigation/_exports";
 
 // Routes and the component they render
 

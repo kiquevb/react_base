@@ -1,6 +1,6 @@
 import { Redirect } from "react-router-dom";
 
-import { paths } from "@navigation/navigation.exports";
+import { paths } from "@navigation/_exports";
 import { Auth } from "@infra/_exports";
 
 const AuthWrapper = ({ children }) => {

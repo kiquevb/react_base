@@ -1,7 +1,7 @@
 import React from "react";
 import { Redirect } from "react-router-dom";
 
-import { paths } from "@/navigation/navigation.exports";
+import { paths } from "@navigation/_exports";
 
 export default class ErrorWrapper extends React.Component {
   constructor(props) {

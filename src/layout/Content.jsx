@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
 
-import { paths, routes } from "@/navigation/navigation.exports";
+import { paths, routes } from "@navigation/_exports";
 
 // Here we can handle routes depending on user type/role
 

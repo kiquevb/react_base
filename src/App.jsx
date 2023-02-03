@@ -2,7 +2,7 @@ import { Suspense, lazy } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import Main from "@layout/Main";
-import { paths } from "@/navigation/navigation.exports";
+import { paths } from "@navigation/_exports";
 import { ErrorWrapper, AuthWrapper } from "@/wrappers/wrappers.exports";
 
 // Public view components
