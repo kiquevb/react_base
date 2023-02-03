@@ -1,4 +1,4 @@
-import Alert from "@/infrastructure/Alerts";
+import { Alert } from "@infra/_exports";
 import {
   MutationCache,
   QueryCache,

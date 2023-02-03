@@ -2,9 +2,9 @@ import React, { useMemo } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Navbar, ScrollArea } from "@mantine/core";
 
-import Icons, { MyIcon } from "@infra/Icons";
+import { Icons, MyIcon } from "@infra/_exports";
 import { useLayoutStore } from "@/store/layout.store";
-import { paths, menu } from "@/navigation/navigation.exports";
+import { paths, menu } from "@navigation/navigation.exports";
 
 import { useStyles } from "@layout/Styles/Navbar.styles";
 

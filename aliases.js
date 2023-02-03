@@ -1,11 +1,11 @@
 const aliases = {
-  "@": "src",
   "@components": "src/components",
   "@features": "src/features",
   "@infra": "src/infrastructure",
   "@layout": "src/layout",
   "@navigation": "src/navigation",
   "@wrappers": "src/wrappers",
+  "@": "src",
 };
 export default aliases;
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { ActionIcon, useMantineColorScheme } from "@mantine/core";
-import Icons, { MyIcon } from "@/infrastructure/Icons";
+import { Icons, MyIcon } from "@infra/_exports";
 
 const ThemeToggler = () => {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme();

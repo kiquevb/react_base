@@ -1,4 +1,4 @@
-import API from "@/infrastructure/Api";
+import { API } from "@infra/_exports";
 
 export async function loginService({ email, password }) {
   const url = "/login";

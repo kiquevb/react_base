@@ -1,7 +1,8 @@
-import Auth from "@/infrastructure/Auth";
-import paths from "@/navigation/paths";
 import { useEffect } from "react";
 import { useHistory } from "react-router-dom";
+
+import { Auth } from "@infra/_exports";
+import paths from "@navigation/paths";
 
 const LogoutView = () => {
   const history = useHistory();

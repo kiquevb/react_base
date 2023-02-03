@@ -1,11 +1,10 @@
 import { useHistory } from "react-router-dom";
 import { joiResolver, useForm } from "@mantine/form";
 
-import Auth from "@/infrastructure/Auth";
-import paths from "@/navigation/paths";
-import { useLoginMutation } from "@/features/Auth/Auth.queries";
-import AuthValidator from "@/features/Auth/Auth.validator";
-import Translator from "@/infrastructure/Translator";
+import { Auth, Translator } from "@infra/_exports";
+import paths from "@navigation/paths";
+import { useLoginMutation } from "@features/Auth/Auth.queries";
+import AuthValidator from "@features/Auth/Auth.validator";
 
 const LoginFormLogic = () => {
   const { t } = Translator();

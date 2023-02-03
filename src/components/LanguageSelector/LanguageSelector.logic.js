@@ -1,4 +1,4 @@
-import { Translator } from "@infra";
+import { Translator } from "@infra/_exports";
 
 const LanguageSelectorLogic = () => {
   const { changeLanguage, language } = Translator();

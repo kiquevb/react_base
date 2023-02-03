@@ -1,4 +1,4 @@
-import Icons from "@/infrastructure/Icons";
+import { Icons } from "@infra/_exports";
 import paths from "./paths";
 
 // Elements of the navigation menu
