@@ -3,8 +3,8 @@ import { joiResolver, useForm } from "@mantine/form";
 
 import { Auth, Translator } from "@infra/_exports";
 import paths from "@navigation/paths";
-import { useLoginMutation } from "@features/Auth/Auth.queries";
-import AuthValidator from "@features/Auth/Auth.validator";
+import { useLoginMutation } from "@resources/Auth/Auth.queries";
+import AuthValidator from "@resources/Auth/Auth.validator";
 
 const LoginFormLogic = () => {
   const { t } = Translator();

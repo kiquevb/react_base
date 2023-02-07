@@ -6,7 +6,7 @@ import { paths } from "@navigation/_exports";
 import { ErrorWrapper, AuthWrapper } from "@wrappers/_exports";
 
 // Public view components
-export const LoginView = lazy(() => import("@features/Auth/views/Login.view"));
+export const LoginView = lazy(() => import("@resources/Auth/views/Login.view"));
 
 // Routes controller
 function App() {

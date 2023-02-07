@@ -2,10 +2,10 @@
 
 import { lazy } from "react";
 
-export const Home = lazy(() => import("@features/Home/views/Home.view"));
+export const Home = lazy(() => import("@resources/Home/views/Home.view"));
 
-export const Logout = lazy(() => import("@features/Auth/views/Logout.view"));
+export const Logout = lazy(() => import("@resources/Auth/views/Logout.view"));
 
 export const Playground = lazy(() =>
-  import("@features/Playground/views/Playground.view")
+  import("@resources/Playground/views/Playground.view")
 );

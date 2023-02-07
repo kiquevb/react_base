@@ -1,6 +1,6 @@
 const aliases = {
   "@components": "src/components",
-  "@features": "src/features",
+  "@resources": "src/resources",
   "@infra": "src/infrastructure",
   "@layout": "src/layout",
   "@navigation": "src/navigation",

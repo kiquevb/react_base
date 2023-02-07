@@ -4,7 +4,7 @@
     // Aliases configuration for editor autocompletion
     "paths": {
       "@components/*": ["src/components/*"],
-      "@features/*": ["src/features/*"],
+      "@resources/*": ["src/resources/*"],
       "@infra/*": ["src/infrastructure/*"],
       "@layout/*": ["src/layout/*"],
       "@navigation/*": ["src/navigation/*"],
