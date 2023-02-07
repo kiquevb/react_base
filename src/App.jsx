@@ -3,7 +3,7 @@ import { Route, Switch } from "react-router-dom";
 
 import Main from "@layout/Main";
 import { paths } from "@navigation/_exports";
-import { ErrorWrapper, AuthWrapper } from "@/wrappers/wrappers.exports";
+import { ErrorWrapper, AuthWrapper } from "@wrappers/_exports";
 
 // Public view components
 export const LoginView = lazy(() => import("@features/Auth/views/Login.view"));
