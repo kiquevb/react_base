@@ -2,10 +2,10 @@ import React from "react";
 import { TextInput, PasswordInput } from "@mantine/core";
 
 import LoginFormLogic from "./LoginForm.logic";
-import { Button } from "@components/_exports";
+import { Button, Loader } from "@components/_exports";
 
 const LoginForm = () => {
-  const { form, text, handleLogin } = LoginFormLogic();
+  const { form, text, isLoading, handleLogin } = LoginFormLogic();
 
   return (
     <form onSubmit={form.onSubmit(handleLogin)}>
@@ -23,6 +23,8 @@ const LoginForm = () => {
       />
 
       <Button type="submit">{text.login}</Button>
+
+      <Loader isLoading={isLoading} />
     </form>
   );
 };

@@ -18,7 +18,7 @@ const LoginFormLogic = () => {
     },
   });
 
-  const { mutate: login } = useLoginMutation();
+  const { mutate: login, isLoading } = useLoginMutation();
 
   const handleLogin = (values) => {
     login(values, {
@@ -35,7 +35,7 @@ const LoginFormLogic = () => {
     password: t("basic.password"),
   };
 
-  return { form, text, handleLogin };
+  return { form, text, isLoading, handleLogin };
 };
 
 export default LoginFormLogic;

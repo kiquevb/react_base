@@ -7,7 +7,12 @@ import {
   useMantineTheme,
 } from "@mantine/core";
 
-import { ThemeToggler, Blank, LanguageSelector } from "@components/_exports";
+import {
+  ThemeToggler,
+  Blank,
+  LanguageSelector,
+  GlobalQueryLoader,
+} from "@components/_exports";
 import { useLayoutStore } from "@/store/layout.store";
 
 const HeaderComponent = () => {
@@ -34,6 +39,8 @@ const HeaderComponent = () => {
         <Text>Random games</Text>
         <Blank />
         <LanguageSelector />
+        <Blank />
+        <GlobalQueryLoader />
       </div>
     </Header>
   );
