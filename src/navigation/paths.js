@@ -3,14 +3,14 @@ const paths = {
   logout: "/logout",
   home: "/home",
   error: "/500",
-  //
-  tictactoe: "/tic-tac-toe",
+  playground: "/playground",
   // names/labels of the paths above
   names: {
+    login: "Login",
     home: "Home",
-    error: "Error",
-    tictactoe: "Tic Tac Toe",
     logout: "Logout",
+    error: "Error",
+    playground: "Playground",
   },
 };
 

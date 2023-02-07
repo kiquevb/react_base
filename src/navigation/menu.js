@@ -10,8 +10,8 @@ const menu = [
     icon: Icons.icon_home,
   },
   {
-    label: paths.names.tictactoe,
-    path: paths.tictactoe,
+    label: paths.names.playground,
+    path: paths.playground,
     icon: Icons.icon_game,
   },
 ];

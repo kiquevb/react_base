@@ -1,33 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
-import { Alert, Storage } from "@infra/_exports";
+import { Alert } from "@infra/_exports";
 import { Button } from "@components/_exports";
 
 const Playground = () => {
-  const [storageNewKey, setStorageNewKey] = useState("");
-
   return (
     <div>
-      <h3>Local Storage</h3>
-
-      <Button onClick={() => Alert.info(Storage.getStringify())}>
-        Show store content
-      </Button>
-
-      <input
-        placeholder="new key"
-        value={storageNewKey}
-        onChange={(e) => setStorageNewKey(e.target.value)}
-      />
-      <Button
-        onClick={() => Alert.info(Storage.setItem(storageNewKey, "test"))}
-      >
-        Set key
-      </Button>
-
-      <Button onClick={() => Alert.info(Storage.emptyStorage())}>
-        Empty storage
-      </Button>
+      <Button onClick={() => Alert.info("Test message")}>Toast alert</Button>
     </div>
   );
 };

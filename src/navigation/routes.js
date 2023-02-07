@@ -1,9 +1,4 @@
-import {
-  HomeView,
-  TicTacToeView,
-  PlaygroundView,
-  LogoutView,
-} from "@navigation/imports";
+import { Home, Logout, Playground } from "@navigation/imports";
 
 import { paths } from "@navigation/_exports";
 
@@ -12,19 +7,15 @@ import { paths } from "@navigation/_exports";
 const routes = [
   {
     path: paths.home,
-    component: HomeView,
-  },
-  {
-    path: paths.tictactoe,
-    component: TicTacToeView,
+    component: Home,
   },
   {
     path: paths.logout,
-    component: LogoutView,
+    component: Logout,
   },
   {
-    path: "/test",
-    component: PlaygroundView,
+    path: paths.playground,
+    component: Playground,
   },
 ];
 
