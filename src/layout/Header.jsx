@@ -36,7 +36,7 @@ const HeaderComponent = () => {
 
         <ThemeToggler />
         <Blank />
-        <Text>Random games</Text>
+        <Text>Project base</Text>
         <Blank />
         <LanguageSelector />
         <Blank />
